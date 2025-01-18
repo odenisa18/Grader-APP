@@ -1,15 +1,16 @@
-#MTA GRADER: A New Step in Exam Automation
+# MTA GRADER: A New Step in Exam Automation
 
 ---
 
 ### Cuprins 📑
-- [Structura Folderelor](#structura-folderelor)
-  - [Singleton](#singleton)
-  - [Utilizatori](#utilizatori)
-  - [Evaluare](#evaluare)
-  - [Fisiere ATM](#fisiere-atm)
-- [Utilizare](#utilizare)
-- [Concepte Insușite](#concepte-insusite)
+- [Structura Folderelor 🗂️](#structura-folderelor)
+  - [Singleton 🧑‍💻](#singleton)
+  - [Utilizatori 👤](#utilizatori)
+  - [Evaluare 📚](#evaluare)
+  - [Fisiere ATM 📂](#fisiere-atm)
+- [Utilizare 💻](#utilizare)
+- [Concepte Insușite 💡](#concepte-insusite)
+- [Licență 📜](#licență)
 
 ---
 
@@ -21,6 +22,8 @@
 - **CFileManager** se ocupă cu gestionarea (citirea/scrierea sau codificarea/decodificarea) tuturor fișierelor text ce vor fi utilizate în cadrul programului.
 - **MTAGrader** gestionează instanțele de grupe, studenți și profesori și este responsabilă pentru inițializarea și legătura dintre acestea.
 
+---
+
 ### **Utilizatori 👤**:
 - **AUtilizator** este o clasă abstractă din care derivă utilizatorii acestei aplicații (concept folosit: moștenire):
   - **CAdministrator** reprezintă un administrator care are rolul principal de a gestiona datele (profesori/studenți/grupe).
@@ -28,12 +31,16 @@
   - **CProfesor** reprezintă un profesor care este asignat unei/unor grupe de studii și poate preda una/mai multe materii.
 - **CGrupa** este o clasă concretă care are în compunere o listă de studenți și profesori cu acces permis celor două tipuri de utilizatori la diverse modalități de evaluare alese de profesor.
 
+---
+
 ### **Evaluare 📚**:
 - **IEvaluare** este o clasă de tip interfață cu metode pure virtuale din care derivă examenele aplicației.
   - **AEvaluare** este o clasă abstractă derivată din interfață care conține membrii comuni celor 3 clase derivate din ea.
     - **CTema** reprezintă tema pe care un student o poate încărca prin intermediul unor fișiere text.
     - **CTestGrila** reprezintă un examen de tip grilă care poate fi corectat instant după încheierea examenului.
     - **CInterviu** reprezintă un examen sub forma unui dialog între profesor și student prin intermediul unor întrebări oferite secvențial.
+
+---
 
 ### **Fisiere ATM 📂**:
 - **GrupeATM.txt** fișier text cu lista numelor grupelor din universitate.
@@ -64,12 +71,6 @@ Pentru utilizare:
    - Pentru a adăuga un examen, se cere un fișier cu datele cerinței etc.
    - Pentru corectare, se cere ID-ul examenului (îl puteți lua din **ExameneATM.txt**, asta dacă nu ați creat unul nou).
 
-Pentru student:
-- Poate vedea ce examene disponibile are.
-- Poate vedea ce examene a susținut deja.
-- Poate susține un examen (la susținerea unui examen temă, țineți cont că dacă sunt mai multe fișiere vor fi numite "nrfisiere+1" adică fișierul cu toate temele scrise pe o linie și câte un fișier pentru fiecare — vezi: **eticaTemaStefanAndreea.txt**).
-- Își poate verifica notele pe baza ID-ului de examen.
-
 ---
 
 ## Concepte Insușite 💡
@@ -78,6 +79,12 @@ Concepte învățate în cadrul acestei teme:
 - **Incapsulare**
 - **Moștenire**
 - **Polimorfism**
+
+---
+
+## Licență 📜
+
+Distribuit sub licența **MIT**. Vedeți [LICENSE](LICENSE) pentru detalii.
 
 ---
 
