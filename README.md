@@ -1,4 +1,4 @@
-# Tema 1 - OOP MTA GRADER: A New Step in Exam Automation
+#MTA GRADER: A New Step in Exam Automation
 
 ---
 
